@@ -1,4 +1,4 @@
-const { SlashCommandBuilder, ChannelType, EmbedBuilder } = require('discord.js');
+const { SlashCommandBuilder, ChannelType, EmbedBuilder, userMention } = require('discord.js');
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -16,11 +16,17 @@ module.exports = {
 
     //Upgrade: Should take into account id instead of username
     //Note: Predefined scores in order to compensate errors made in my server
-    var leaderboard = [{user: "Gon'tzalo", score: 1}, {user: "Gothia", score: 1}];    
+    var leaderboard = [{user: "Gon'tzalo", score: 0}];    
     let lastId;
     let found;
-    let checkSum = 2;
+    let checkSum = 0;
     
+    if(chan.id === 1002926473386143814) {
+      leaderboard = [{ user: "Gon'tzalo", score: 1}, {user: "Gothia", score: 1}];
+      checkSum = 2;
+      console.log("Taking into account errors made in patitos");
+    } 
+
     while (true) {
       const options = { limit: 100 };
       if(lastId) options.before = lastId;
@@ -84,7 +90,8 @@ module.exports = {
       }
       rankings += leaderboard[i].user + ': ' + leaderboard[i].score + '\n';
     }
-        
+    rankings += `||Requested by ${userMention(interaction.user.id)}||`
+    
     const rankEmbed = new EmbedBuilder()
     .setColor(0xe63e52)
     .setTitle(`COUNTER LEADERBOARD`)
