@@ -49,8 +49,6 @@ module.exports = {
       lastId = fetchMessages.last().id;
       if(fetchMessages.size != 100) break;
     }
-
-    console.log(checkSum);
     
     //OrdXBur
     let ord = false;
@@ -66,9 +64,7 @@ module.exports = {
         };
       }
     }
-    
-    console.log(leaderboard);
-
+  
     //Preparar string de salida
     let rankings = `Channel: ${chan}\n\n_Current Number: ${checkSum}_\n\n`;    
     for (let i = 0; i < leaderboard.length; i++) {
@@ -88,9 +84,7 @@ module.exports = {
       }
       rankings += leaderboard[i].user + ': ' + leaderboard[i].score + '\n';
     }
-    
-    console.log(rankings);
-    
+        
     const rankEmbed = new EmbedBuilder()
     .setColor(0xe63e52)
     .setTitle(`COUNTER LEADERBOARD`)
