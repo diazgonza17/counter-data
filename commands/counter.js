@@ -12,7 +12,7 @@ module.exports = {
   
   async execute(interaction) {
     const chan = interaction.options.getChannel('channel');
-    await interaction.reply({ content: 'Loading... please wait around 5 seconds', ephemeral: true });
+    await interaction.reply({ content: 'Loading... this could take a while', ephemeral: true });
 
     //Upgrade: Should take into account id instead of username
     //Note: Predefined scores in order to compensate errors made in my server
