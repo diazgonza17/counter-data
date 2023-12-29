@@ -1,9 +1,9 @@
 # Counter Data by Gon'tzalo
 
-## Description
-
 > [!WARNING]  
 > This is a personal side project and is NOT under active maintenance, to invite the bot to your server please contact the owner.
+
+## Description
 
 A discord bot that mainly makes a leaderboard with the amount of messages sent by each user on a particular channel.
 
