@@ -11,7 +11,14 @@ A discord bot that mainly makes a leaderboard with the amount of messages sent b
 
 ## Commands
 
-1. **/counter <channel>**: Retrieves the leaderboard of the specified channel.
-2. **/first <channel>**: Retrieves the first message of a given channel.
-3. **/user [user]**: Retrieves information about the specified user or about you if no user is specified
-4. **/server**: Retrieves information about the server where it's called
+- `/counter <channel>`  
+  Retrieves the leaderboard of the specified channel.
+
+- `/first <channel>`  
+  Retrieves the first message of a given channel.
+
+- `/user [user]`  
+  Retrieves information about the specified user or about you if no user is specified
+
+- `/server`  
+  Retrieves information about the server where it's called
